@@ -20,8 +20,8 @@ const MainMint = ({accounts, setAccounts}) => {
         }
 
         try {
-            const response = await contract.mint(BigNumber.mintAmount); // Solidity required
-            console.log("Response: ", response);
+            // const response = await contract.mint(BigNumber.mintAmount); // Solidity required
+            // console.log("Response: ", response);
         } catch (err) {
             console.log("Error found: ", err);
         }

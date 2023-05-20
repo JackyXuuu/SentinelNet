@@ -8,9 +8,13 @@ import NavBar from './NavBar';
 function App() {
   const [accounts, setAccounts] = useState([]); // Update/Changes 
 
-  return (<div className="App">
-    <NavBar accounts={accounts} setAccounts={setAccounts}/> {/* Prop Drilling*/}
-    <MainMint accounts={accounts} setAccounts={setAccousnts}/> {/* Prop Drilling*/}
+  return (
+  <div className="overlay">
+    <div className="App">
+      <NavBar accounts={accounts} setAccounts={setAccounts}/> {/* Prop Drilling*/}
+      <MainMint accounts={accounts} setAccounts={setAccounts}/> {/* Prop Drilling*/}
+    </div>
+    <div className="moving-background"></div>
   </div>);
 }
 
