@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./Home";
 import NavBar from "./NavBar";
+import Mint from "./Mint";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 function App() {
   const [accounts, setAccounts] = useState([]); // Update/Changes
@@ -25,14 +27,19 @@ function App() {
   return (
     <div className="overlay">
       <div className="App">
-        <NavBar
-          visible={visible}
-          accounts={accounts}
-          setAccounts={setAccounts}
-        />{" "}
-        {/* Prop Drilling*/}
-        <Home />
-        {/* <MainMint accounts={accounts} setAccounts={setAccounts}/> { Prop Drilling} } */}
+        <Router>
+          <NavBar
+            visible={visible}
+            accounts={accounts}
+            setAccounts={setAccounts}
+          />
+          {/* Prop Drilling*/}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mint" element={<Mint />} />
+            {/* <MainMint accounts={accounts} setAccounts={setAccounts}/> { Prop Drilling} } */}
+          </Routes>
+        </Router>
       </div>
       <div className="moving-background"></div>
     </div>
