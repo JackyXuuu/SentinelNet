@@ -1,0 +1,59 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  padding-top: 0.5em;
+  padding-left: 4em;
+  color: whitesmoke;
+  transition: top 0.2s ease-in-out;
+}
+
+.navbar.hidden {
+  top: -15%;
+}
+
+.pages {
+  padding-bottom: 1em;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pages div {
+  font-size: 1.75em;
+  font-weight: 400;
+
+}
+
+.name h1 {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-right: 0.3em;
+
+}
+
+.name {
+  margin-left: 7em;
+  padding: 1em;
+  border: 0.1em whitesmoke solid;
+  border-radius: 2.3em;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.224), rgba(255, 255, 255, 0.023));
+  margin-bottom: 0.5em;
+}
+
+.navbar img {
+  display: flex;
+  width: 4em;
+  position: relative;
+  left: -0.6em;
+}

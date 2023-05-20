@@ -1,23 +1,28 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+/* @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 @import url("https://fonts.googleapis.com/css?family=VT323");
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto:wght@400;700&display=swap');
 
 .App {
-  text-align: center;
-  font-family: "Press Start 2P", "VT323";
-  color: white;
+/* font-family: 'Roboto', sans-serif; */
+font-family: 'Nanum Myeongjo', serif;
+
 }
 
 * {
   /* all the css is defined in this specific way */
   box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  overflow: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 /* Provides a grey overlay for the background */
-.overlay{
+/* .overlay{
   opacity: 0.85;
   width: 100%;
   height: 100%;
@@ -26,9 +31,9 @@ body {
   left: 0;
   position: fixed;
 }
-
+ */
 /* Optimal way: Use multiple layers of images that move instead of gif for better performance */
-.moving-background {
+/* .moving-background {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -40,4 +45,4 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 40% 40%;
-}
+} */
