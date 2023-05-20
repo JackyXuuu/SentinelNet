@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ethers, BigNumber } from 'ethers';
-// have to import the SentinelNet NFT
+import sentinelNet from './SentinelNet.json'
 
-const sentinelNetAddress = "" // FILL IN ADDRESS
+const sentinelNetAddress = "0xdc64a140aa3e981100a9beca4e685f962f0cf6c9" // FILL IN ADDRESS
 
 const MainMint = ({accounts, setAccounts}) => {
     const [mintAmount, setMintAmount] = useState(1); // Determines the number of quantity the user is selecting to mint
@@ -14,7 +14,7 @@ const MainMint = ({accounts, setAccounts}) => {
             const signer = provider.getSigner(); // Need a signer, something to sign the transaction
             const contract = new ethers.Contract(
                 sentinelNetAddress,
-                //theJSON.abi,
+                sentinelNet.abi,
                 signer
             );
         }
