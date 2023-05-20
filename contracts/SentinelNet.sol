@@ -11,7 +11,7 @@ contract SentinelNet is ERC721, Ownable {
     uint256 public mintPrice;
     uint256 public totalSupply;
     uint256 public maxSupply; 
-    unit256 public maxPerWallet; 
+    uint256 public maxPerWallet; 
     bool public isPublicMintEnabled;
     string internal baseTokenUri;
     address payable public withdrawWallet;
@@ -20,7 +20,7 @@ contract SentinelNet is ERC721, Ownable {
     constructor() payable ERC721('SentinelNet', 'RP'){
         mintPrice = 0.02 ether;
         totalSupply = 0;
-        maxSuppy = 1000;
+        maxSupply = 1000;
         maxPerWallet = 3;
         // set withdraw wallet address 
     }
@@ -43,5 +43,19 @@ contract SentinelNet is ERC721, Ownable {
         (bool success, ) = withdrawWallet.call{ value: address(this).balance }('');
         require(success, 'withdraw failed');
     }
+
+    function mint(uint256 quantity_) public payable {
+        require(isPublicMintEnabled, 'minting not enabled');
+        require(msg.value == quantity_ * mintPrice, 'wrong mint value');
+        require(totalSupply + quantity_ <= maxSupply, 'sold out');
+        require(walletMints[msg.sender] + quantity_ <= maxPerWallet, 'exceed max wallet');
+
+        for (uint256 i = 0; i < quantity_; i++) {
+            uint256 newTokenId = totalSupply + 1;
+            totalSupply++;
+            _safeMint(msg.sender, newTokenId);
+        }
+    }
 }
+
 
