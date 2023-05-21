@@ -10,7 +10,7 @@
   z-index: 1;
   /* background-color: rgba(0, 0, 0, 0.2); */
   padding-top: 0.7em;
-  padding-left: 4em;
+  padding-left: 5%;
   color: whitesmoke;
   transition: top 0.4s ease-in-out;
 }
@@ -19,21 +19,22 @@
   display: block;
   padding: 0.5em 0.7em;
   margin: -0.5em -0.7em;
-  background-color: transparent;
   border-radius: 0.8em;
   text-decoration: none;
   color: whitesmoke;
+  border: 1px whitesmoke solid;
   
   background: 
   linear-gradient(currentColor 0 0) 
   50% 80% /var(--d, 0) 0.05em 
   no-repeat;
+  backdrop-filter: blur(5px);
+  background-color: #00000061;
   transition: 0.5s ease;
   
 }
 
 .nav-items .nav-link:hover {
- background-color: #00000063; 
  --d: 85%
 }
 
@@ -43,7 +44,7 @@
 
 .nav-items {
   padding-bottom: 1em;
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -74,7 +75,7 @@
 }
 
 .name {
-  margin-left: 7em;
+  margin-left: 5em;
   padding-right: 0;
   border: 0.1em whitesmoke solid;
   border-radius: 2.3em;

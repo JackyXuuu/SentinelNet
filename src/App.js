@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import Mint from "./Mint";
+import MainMint from "./MainMint";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 function App() {
@@ -36,7 +37,12 @@ function App() {
           {/* Prop Drilling*/}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/mint" element={<Mint />} />
+            <Route
+              path="/mint"
+              element={
+                <MainMint accounts={accounts} setAccounts={setAccounts} />
+              }
+            />
             {/* <MainMint accounts={accounts} setAccounts={setAccounts}/> { Prop Drilling} } */}
           </Routes>
         </Router>

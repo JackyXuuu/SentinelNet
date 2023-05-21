@@ -10,6 +10,7 @@ section {
   max-width: 100%;
   height: 100vh;
   position: relative;
+  overflow: visible;
 }
 
 .sec01 {
@@ -36,4 +37,102 @@ section {
 .sec01 p {
   font-size: 1.25em;
   text-align: center;
+}
+
+
+.sec02 {
+  background: url(assets/sec02background.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.sec02 .title {
+position: absolute;
+text-align: center;
+width: 100%;
+height: 2em;
+top: 1.6em;
+
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 40px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+.table1 {
+  position: absolute;
+  height: 50%;
+  left: 5%;
+  top: 15%
+
+}
+
+.img1 {
+  position: absolute;
+  height: 35%;
+  left: 75%;
+  top: 7%;
+  }
+
+.table2 {
+  position: absolute;
+  width: 73%;
+  left: 20%;
+  top: 287.99px;
+}
+
+.sec02 p {
+  position: absolute;
+  left: 20%;
+  top: 70%;
+
+  font-weight: 400;
+  font-size: 1.8em;
+  line-height: 0.9em;
+
+}
+
+span {
+  color: #FF9900;
+}
+
+.spike {
+  position: absolute;
+  width: 20%;
+  left: 90%;
+  top: 76.5%;
+  z-index: 2;
+}
+
+.sec03 {
+  background: url(assets/section3.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* .sec03 div {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
+
+  background-color: transparent;
+  border: whitesmoke 1px solid;
+  border-radius: 3em;
+}
+
+.sec03 h2 {
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 1%;
+  font-size: 2.5em;
+} */
+
+.final {
+  background: url(assets/lastsection.jpg) no-repeat center center;
+  background-size: cover;
 }

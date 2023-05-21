@@ -21,6 +21,10 @@ body {
   overflow-x: hidden;
 }
 
+.highlight {
+  color: yellow;
+}
+
 /* Provides a grey overlay for the background */
 /* .overlay{
   opacity: 0.85;

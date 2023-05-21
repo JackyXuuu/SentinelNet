@@ -39,7 +39,6 @@ const NavBar = ({ visible, accounts, setAccounts }) => {
             Mint Your Token{" "}
           </Link>
         </div>
-        <div>Team</div>
         {isConnected ? (
           <p>Connected</p>
         ) : (
