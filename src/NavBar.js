@@ -5,15 +5,21 @@ import { Link } from "react-router-dom";
 
 // Prop Drilling
 const NavBar = ({ visible, accounts, setAccounts }) => {
-  const isConnected = Boolean(accounts[0]);
+  /* const isConnected = Boolean(accounts[0]);
 
-  async function connectAccount() {
+   async function connectAccount() {
     if (window.ethereum) {
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
       });
       setAccounts(accounts);
     }
+  } */
+
+  const isConnected = accounts;
+
+  function connectAccount() {
+    setAccounts(!accounts);
   }
 
   return (
@@ -35,12 +41,14 @@ const NavBar = ({ visible, accounts, setAccounts }) => {
           </Link>
         </div>
         <div>
+          {/*hey copilot can you change this link to a dropdown with 3 values a,b,c */}
+
           <Link to="/mint" className="nav-link">
             Mint Your Token{" "}
           </Link>
         </div>
         {isConnected ? (
-          <p>Connected</p>
+          <button onClick={connectAccount}>Disconnect</button>
         ) : (
           <button onClick={connectAccount}>Connect</button>
         )}

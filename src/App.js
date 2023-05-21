@@ -7,7 +7,8 @@ import MainMint from "./MainMint";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 function App() {
-  const [accounts, setAccounts] = useState([]); // Update/Changes
+  /* const [accounts, setAccounts] = useState([]); */ // Update/Changes
+  const [accounts, setAccounts] = useState(false);
 
   const [prevScrollPos, setPrevScrollPos] = useState(0); // Track scrolling
   const [visible, setVisible] = useState(true); // Set NavBar visibility
@@ -38,7 +39,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
-              path="/mint"
+              path="/mint/:hash?"
               element={
                 <MainMint accounts={accounts} setAccounts={setAccounts} />
               }
